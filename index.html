@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/main.controller.js"></script>
+    <script src="js/exampleService.js"></script>
+</head>
+<body ng-app="app">
+<div>
+    <div ng-controller="MainController">
+        <input type="text" ng-model="name" placeholder="Enter a name here">
+        <input type="checkbox" ng-model="show">
+        <button ng-click="click()">OK!</button>
+        <div ng-if="show">
+            <h1>Hello {{name}}!</h1>
+        </div>
+
+        <p>SERVICE:</p>
+        <input type="text" ng-model="newCar" placeholder="Enter car brand here">
+        <button ng-click="addCar(newCar)">ADD CAR!</button>
+        <ul>
+<!--            <li ng-repeat="car in cars track by $index"> to allow duplicates, because DOM association will be by index (not value)-->
+            <li ng-repeat="car in cars">
+                Car brand == {{car}}
+            </li>
+        </ul>
+
+        <p>FACTORY:</p>
+        <input type="text" ng-model="newLang" placeholder="Enter language here">
+        <button ng-click="addLang(newLang)">ADD Lang!</button>
+        <ul>
+            <li ng-repeat="lang in languages">
+                Language == {{lang}}
+            </li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>
