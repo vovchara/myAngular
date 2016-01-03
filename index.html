@@ -25,6 +25,7 @@
 <!--            <li ng-repeat="car in cars track by $index"> to allow duplicates, because DOM association will be by index (not value)-->
             <li ng-repeat="car in cars">
                 Car brand == {{car}}
+                <button ng-click="removeCar(car)">x</button>
             </li>
         </ul>
 
@@ -34,6 +35,7 @@
         <ul>
             <li ng-repeat="lang in languages">
                 Language == {{lang}}
+                <button ng-click="removeLang(lang)">x</button>
             </li>
         </ul>
     </div>

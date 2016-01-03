@@ -15,6 +15,9 @@
                 alert("Already exist!");
             }
         };
+        $scope.removeCar = function (car) {
+            exService.removeCar(car);
+        };
 
         $scope.languages = exFact.getLanguages();
         $scope.addLang = function (lang) {
@@ -22,6 +25,9 @@
             if (!successAdded) {
                 alert("Already know! ha-ha");
             }
+        };
+        $scope.removeLang = function (lang) {
+            exFact.removeLang(lang);
         };
     }
 

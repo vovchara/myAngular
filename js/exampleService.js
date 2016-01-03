@@ -16,6 +16,9 @@
             },
             getLanguages: function () {
                 return languages
+            },
+            removeLang : function (lang){
+                languages.splice(languages.indexOf(lang), 1);
             }
         }
     });
@@ -30,6 +33,9 @@
                 return false;
             }
 
+        };
+        this.removeCar = function (car) {
+            listOfCars.splice(listOfCars.indexOf(car), 1);
         };
         this.getCars = function () {
             return listOfCars;
